@@ -4,11 +4,13 @@ import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
+import java.io.Serializable;
+
 /**
  * Created by hieunt on 16-Sep-16.
  */
 @Table(name = "tbUser")
-public class User extends Model {
+public class User extends Model implements Serializable {
     @Column(name="UID")private String ID;
     @Column(name="Name")private String Name;
     public String getID() {
